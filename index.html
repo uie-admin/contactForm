@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Ticket Form</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="/config.js"></script>
+
+    <script>
+        function onSubmit(token) {
+            document.getElementById("ticket-form").submit();
+        }
+    </script>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
+</head>
+
+<body>
+    <form id="ticket-form" action="/submit" method="post">
+        <div>
+            <label for="name">Your Full Name<span class="red-asterisk">*</span></label><br>
+            <input type="text" name="name" required><br>
+            <label for="email">Email<span class="red-asterisk">*</span></label><br>
+            <input type="email" name="email" required><br>
+            <!-- <label for="company">Company Name</label><br>
+            <input type="text" name="company"><br> -->
+            <label for="subject">Subject<span class="red-asterisk">*</span></label><br>
+            <input type="text" name="subject" required><br>
+            <label for="description">Describe in detail what we can help you with.<span
+                    class="red-asterisk">*</span></label>
+            <textarea name="description" rows="3" required></textarea>
+            <p>*Required Fields</p>
+        </div>
+        <div class="button-container">
+            <button class="g-recaptcha btn-shadow" data-sitekey="6LcD2AYqAAAAADVSswFbuw5vJr1MlYvNqTQe5FUj"
+                data-callback="onSubmit" data-size="invisible">Send Message</button>
+        </div>
+    </form>
+</body>
+
+</html>
