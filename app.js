@@ -61,7 +61,8 @@ app.post("/submit", recaptcha.middleware.verify, async (req, res) => {
         try {
             const response = await axios(options);
             console.log("Zendesk response:", response.data);
-            res.status(200).send("Form submitted successfully");
+            console.log("Zendesk response stringified:", JSON.stringify(response.data, null, 2));
+            res.redirect('/formresponse.html')
         } catch (error) {
             console.error("Error submitting to Zendesk:", error.response ? error.response.data : error.message);
             res.status(500).send("Error submitting to Zendesk");
@@ -71,6 +72,10 @@ app.post("/submit", recaptcha.middleware.verify, async (req, res) => {
         res.status(400).send("reCAPTCHA verification failed");
     }
 });
+
+
+
+
 
 app.listen(port, () => {
     console.log(`Server running on port ${port}. Visit http://localhost:${port}`);
