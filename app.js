@@ -61,13 +61,8 @@ app.post("/submit", recaptcha.middleware.verify, async (req, res) => {
         try {
             const response = await axios(options);
             console.log("Zendesk response:", response.data);
+            console.log("Zendesk response stringified:", JSON.stringify(response.data, null, 2));
             res.redirect('/formresponse.html')
-            //             res.status(200).send(`
-            //   <div class="success-message" style="display: flex; color:blue; border: 1px solid red; justify-content: center; align-items: center; font-family: 'Open Sans', sans-serif; width: 400px; height:300px; font-size: 20px;
-            // ">
-            //         Thank you for your message. <br>We're a small team and will work hard to respond to you in the next 24 hours.
-            //     </div>
-            // `);
         } catch (error) {
             console.error("Error submitting to Zendesk:", error.response ? error.response.data : error.message);
             res.status(500).send("Error submitting to Zendesk");
