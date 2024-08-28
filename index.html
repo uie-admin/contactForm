@@ -23,7 +23,8 @@
             <label for="name">Your Full Name<span class="red-asterisk">*</span></label><br>
             <input type="text" name="name" required><br>
             <label for="email">Email<span class="red-asterisk">*</span></label><br>
-            <input type="email" name="email" required><br>
+            <input type="email" name="email" required placeholder="name@email.com"><br>
+            <p class="disclaimer">We'll never share your email with anyone else.</p>
             <label for="company">Company Name</label><br>
             <input type="text" name="company"><br>
             <label for="subject">Subject<span class="red-asterisk">*</span></label><br>
@@ -31,7 +32,7 @@
             <label for="description">Describe in detail what we can help you with.<span
                     class="red-asterisk">*</span></label>
             <textarea name="description" rows="3" required></textarea>
-            <p>*Required Fields</p>
+            <p class="p-red">*Required Fields</p>
         </div>
         <div class="button-container">
             <button class="g-recaptcha btn-shadow" data-sitekey="6LcD2AYqAAAAADVSswFbuw5vJr1MlYvNqTQe5FUj"
