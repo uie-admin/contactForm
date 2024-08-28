@@ -21,16 +21,32 @@ form {
 form input {
     width: 100%;
     padding-bottom: 10px;
+    height: 25px;
     margin-bottom: 20px;
     border: 1px solid #CACACA;
     border-radius: 5px;
 
 }
 
+input::placeholder {
+    color: lightgray;
+    font-size: 1.2em;
+    /* Adjust the size to your preference */
+    transform: translateY(4px);
+    /* Moves the placeholder text down */
+    padding-left: 4px;
+}
+
+.disclaimer {
+    font-size: 12px;
+    margin-top: -15px;
+}
+
 form textarea {
     width: 100%;
     border: 1px solid #CACACA;
     border-radius: 5px;
+    height: 80px;
 }
 
 .button-container {
@@ -43,23 +59,23 @@ form textarea {
 button {
     background-color: rgb(255, 255, 255);
     color: black;
-    padding: 10px 20px;
     border: 2px solid black;
     cursor: pointer;
     width: 50%;
     font-weight: 800;
-    padding: 15px;
     font-size: 16px;
+    padding: 15px 20px;
 }
 
 /* button:hover {} */
 
-p {
+
+.p-red {
     color: red;
     margin-top: 0%;
-    font-size: 10px;
-}
+    font-size: 12px;
 
+}
 
 .btn-shadow {
     box-shadow: 1px 1px 0px 0px rgb(8 8 8), -1px -1px 0px 0px rgb(8 8 8),
@@ -97,6 +113,7 @@ p {
 .success-message {
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: 'Open Sans', sans-serif;
