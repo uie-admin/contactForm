@@ -47,12 +47,15 @@ form textarea {
     border: 1px solid #CACACA;
     border-radius: 5px;
     height: 80px;
+    font-family: 'Open Sans', sans-serif;
+
 }
 
 .button-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 
 }
 
@@ -65,10 +68,15 @@ button {
     font-weight: 800;
     font-size: 16px;
     padding: 15px 20px;
+    margin: 1em;
 }
 
 /* button:hover {} */
 
+#error-message {
+    color: red;
+    display: block;
+}
 
 .p-red {
     color: red;
