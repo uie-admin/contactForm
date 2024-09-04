@@ -4,7 +4,7 @@ body {
     /* border: 1px solid green; */
     justify-content: center;
     align-items: center;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif !important;
 }
 
 
@@ -47,7 +47,9 @@ form textarea {
     border: 1px solid #CACACA;
     border-radius: 5px;
     height: 80px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: sans-serif !important;
+
+    font-family: inherit;
 
 }
 
