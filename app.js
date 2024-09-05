@@ -66,6 +66,7 @@ app.post("/submit", recaptcha.middleware.verify, async (req, res) => {
         } catch (error) {
             console.error("Error submitting to Zendesk:", error.response ? error.response.data : error.message);
             res.status(500).send("Error submitting to Zendesk");
+
         }
     } else {
         console.error("reCAPTCHA verification failed:", req.recaptcha.error);
