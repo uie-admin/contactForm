@@ -75,7 +75,11 @@ button {
     margin: 1em;
 }
 
-/* button:hover {} */
+button:hover {
+    background-color: #00a3b4;
+    color: white;
+
+}
 
 #error-message {
     color: red;
